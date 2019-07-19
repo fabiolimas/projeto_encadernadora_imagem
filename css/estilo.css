@@ -1,0 +1,389 @@
+*{
+
+	margin:0;
+	padding:0;
+}
+
+#interface{
+
+   width: 1080px;
+    background: white;
+    top: 31%;
+    padding: 30px;
+    /* box-shadow: 2px 2px 5px #a09e9e; */
+    /* border: 1px solid #093c58; */
+    position: absolute;
+    left: 50%;
+    margin-left: -571px;
+    margin-top: -30px;
+    border-radius: 7px;
+
+}
+fieldset {
+    padding: 12px;
+    color: #585656;
+    font-weight: bold;
+    background: #ffffff82;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+}
+legend{
+    font-weight: bold;
+        font-size: 20px;
+    color: black;
+}
+#encadernadora input[type="text"],input[type="email"], input[type="date"]  {
+ padding: 5px;
+    border-radius: 5px;
+    border: navajowhite;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 10px;
+    background: #80808036;
+}
+/*input#npages {
+    display: initial;
+}*/
+#encadernadora select{
+ padding: 5px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    width: 200px;
+    background: #f0f8ff00;
+    border-bottom: 1px solid #023754;
+    margin-top: 14px;
+    font-size: 17px;
+    text-align: center !important;
+    color: black;
+    font-weight: 500;
+
+}
+div#imagem {
+    width: 492px;
+    /* height: 300px; */
+    display: block;
+    position: absolute;
+    top: 49%;
+    left: 44%;
+}
+span.red {
+    color: #b70707;
+}
+img#image {
+    width: 100%;
+    filter:opacity(0);
+    transition: 1s;
+    margin: 0 auto;
+}
+.nova{
+    width: 358px;
+    background-color: #ffffff;
+    top: 50%;
+    padding: 30px;
+    /* box-shadow: 2px 2px 1px #073954; */
+    /* border: 1px solid #093c58; */
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -210px;
+    margin-top: -34px;
+    border-radius: 7px;
+}
+
+body{
+
+	    font-family: arial;
+    color: black;
+    background-image: url(http://www.fotoimagem.com.br/templates/imagem/imgs/bg_25.png);
+
+}
+h1{
+
+	text-align: center;
+	text-shadow: 1px 1px 1px gray;
+	margin-bottom: 88px;
+    color: black;
+
+}
+
+#logh1{
+    
+
+    text-align: center;
+    text-shadow: 1px 1px 1px gray;
+    margin-bottom: 20px;
+
+
+}
+#btn{
+
+	background-color: #949494;
+    border: none;
+    border-radius: 5px;
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: -16px;
+    color:white;
+}
+#btn:hover{
+	background-color:#073954;
+	color:white;
+}
+#bt{
+
+	border:none;
+	border-radius:5px;
+	width:20px;
+	
+	cursor:pointer;
+	
+
+}
+#btn2{
+
+	    background-color: black;
+    border: none;
+    border-radius: 19px;
+    width: 139px;
+    height: 42px;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+}
+
+#btn2:hover{
+background-color:white;
+	color:black;
+
+}
+#btnx {
+    float: right;
+    margin-top: -64px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#btnxl {
+   margin-top: -16px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 355px;
+}
+table {
+    width: 100%;
+    text-align: center;
+    margin:0 auto;
+    border-color: white;
+    margin-top: 18px;
+
+}
+table[td]{
+
+	width:150px;
+}
+/*span{
+	color:black;
+}*/
+ul{
+	margin-left: 27%;
+}
+ul li{
+
+ 	    display: inline-block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-family: tahoma;
+    font-size: 15px;
+    line-height: 41px;
+    margin-right: 50px;
+    cursor: pointer;
+    color: gray;
+    box-shadow: 2px 2px 4px #848484;
+    border: 1px solid #7d7d7d;
+    transition: 0.3s;
+    border-radius: 7px;
+
+}
+ul li:hover{
+	
+	color: black;
+
+
+
+}
+img#edit {
+    width: 35px;
+    filter: drop-shadow(0px 0px 1px black);
+    padding: 2px;
+}
+
+ul li a{
+	
+	text-decoration: none;
+	
+}
+#h_loja{
+	
+	    position: absolute;
+    margin-left: -35px;
+width: 158px;
+margin-top: 62px;
+    filter:opacity(67%);
+    transition:0.3s;
+}
+
+#h_encaderna{
+	    position: absolute;
+    margin-left: -33px;
+width: 162px;
+margin-top: 35px;
+    filter:opacity(50%);
+    transition:0.3s;
+}
+
+#h_loja:hover{
+	filter: opacity(100%);
+}
+
+#h_encaderna:hover{
+	filter: opacity(100%);
+
+}
+img#logo {
+   position: absolute;
+    top: 31%;
+    left: 50%;
+    width: 184px;
+    margin-left: -92px;
+    margin-top: -130px;
+
+}
+#form_logins {
+   
+    display: inline-grid;
+}
+#imglogin {
+    position: absolute;
+    width: 200px;
+    margin-left: 191px;
+    margin-top: -46px;
+}
+#sair {
+    width: 50px;
+    float: right;
+    cursor:pointer;
+}
+
+#sair2 {
+    width: 50px;
+margin-left: 91%;
+position: absolute;
+cursor: pointer;
+}
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#btexport {
+      width: 52px;
+    margin-top: 76px;
+    position: absolute;
+    margin-left: 1042px;
+}
+#h_loja2{
+    
+        position: absolute;
+  margin-left: -66px;
+width: 158px;
+margin-top: 34px;
+    filter:opacity(67%);
+    transition:0.3s;
+}
+
+#h_encaderna2{
+        position: absolute;
+    margin-left: 15px;
+width: 162px;
+margin-top: 40px;
+    filter:opacity(50%);
+    transition:0.3s;
+}
+
+#h_loja2:hover{
+    filter: opacity(100%);
+}
+
+#h_encaderna2:hover{
+    filter: opacity(100%);
+
+}
+#h_loja3{
+    
+          position: absolute;
+    margin-left: -53px;
+    width: 196px;
+    margin-top: 53px;
+    filter: opacity(67%);
+    transition: 0.3s;
+}
+}
+#h_loja3:hover{
+    filter: opacity(100%);
+}
+textarea#txtarea {
+    width: 267px;
+    height: 120px;
+    margin-top: 10px;
+}
+
+#formobs input[type="text"] {
+    display: table-caption;
+}
+/*.lab{
+    color:orange;
+}*/
+
+#form {
+    font-size: 18px;
+    text-align: center;
+    color: #8e8e8e;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* text-shadow: 1px 1px 1px black; */
+
+}
+fieldset {
+    margin-bottom: 22px;
+}
+div#paginacao {
+    position: absolute;
+    top: 98%;
+}
+a#btpagina {
+    margin-left: 11px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+a#btpagina:hover {
+    text-decoration: underline;
+}
+.stat1{
+    color: orange;
+}
+.stat2{
+    color: #7b0000;
+}
+.stat3{
+    color: #4bde4b;
+}
+.stat4{
+    color:#ffbf03;
+}
