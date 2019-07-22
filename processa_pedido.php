@@ -65,6 +65,7 @@
 	
 	$status_pagamento=$_POST['status_os'];
 	$osfoto=$_POST['osfoto'];
+	$servico_add=$_POST['servico_add'];
 
 	
 
@@ -90,7 +91,7 @@ if(strlen($pagamento)>=6){
 		exit();
 	}else{
 
-		$processar="INSERT INTO pedido (id_pedido, id_loja,os_fotografia, os, codigo_cliente, cliente, email_cliente,  telefone_cliente, vendedor,status_pag, valor, id_status, data_loja, data_lab, data_encad, id_modelo, id_tamanhoalb, paginas, id_laminacao, id_modelocapa, id_laminacaocapa, id_cantoneira, id_corte, id_estojo, id_maleta) VALUES(NULL, '$idloja','$osfoto', '$os', ' $codigo_cliente', '$cliente', '$email', '$telefone', '$vendedor','$status_pagamento', '$new_valor','$status', '$dataloja','','', '$modeloalbum', '$tamanho', '$paginas', '$lamalbum', '$modelocapa', '$lamcapa', '$cantoneira', '$corte', '$estojo', '$maleta')";
+		$processar="INSERT INTO pedido (id_pedido, id_loja,os_fotografia, os, codigo_cliente, cliente, email_cliente,  telefone_cliente, vendedor,status_pag, valor, id_status, data_loja, data_lab, data_encad, id_modelo, id_tamanhoalb, paginas, id_laminacao, id_modelocapa, id_laminacaocapa, id_cantoneira, id_corte, id_estojo, id_maleta, id_servico) VALUES(NULL, '$idloja','$osfoto', '$os', ' $codigo_cliente', '$cliente', '$email', '$telefone', '$vendedor','$status_pagamento', '$new_valor','$status', '$dataloja','','', '$modeloalbum', '$tamanho', '$paginas', '$lamalbum', '$modelocapa', '$lamcapa', '$cantoneira', '$corte', '$estojo', '$maleta', '$servico_add')";
 	$query_proc=mysqli_query($conecta, $processar);
 
 	if($query_proc){

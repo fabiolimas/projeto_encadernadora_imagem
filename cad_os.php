@@ -78,6 +78,8 @@
 			$status_pag="SELECT * FROM status_pag";
 			$query_status=mysqli_query($conecta, $status_pag);
 
+			$servico_add="SELECT * FROM servico_adicional";
+			$query_servico=mysqli_query($conecta, $servico_add);
 			
 
 
@@ -221,7 +223,20 @@
 			}
 			echo"</select><br><br><br>";
 
+			echo"Serviços Adicionais:<select name='servico_add' value=''><option value='4'>Selecione um serviço</option>";
+			while($lista_servico_add=mysqli_fetch_array($query_servico)){
+
+				$id_servico=$lista_servico_add['id_servico'];
+				$nome_servico=$lista_servico_add['servico_nome'];
+
+				echo "<option value='$id_servico'>$nome_servico</option>";
+
+
+			}
+			echo"</select>";
 			echo"</fieldset>";
+
+
 		
 
 }

@@ -43,7 +43,7 @@
 
 $id=$_GET['id'];
 
-	$listar_pedidos="SELECT p.id_pedido, l.nome_loja,p.os_fotografia, p.os, p.cliente, p.email_cliente, p.vendedor, sp.statuspg, p.valor, s.status, p.telefone_cliente, p.data_loja, p.data_lab, p.data_encad, moda.nome_modelo, tamanho.nome_tamanho_album,p.paginas, modc.nome_modelo_capa, c.nome_cantoneira, corte.nome_corte, lampag.nome_laminacao, lamcap.nome_laminacaocapa, modest.nome_modelo_estojo, modmal.nome_modelo_maleta  FROM pedido as p join lojas as l on p.id_loja=l.id_loja join modelo_de_album as   moda on moda.id_modelo= p.id_modelo join modelo_de_capa modc on modc.id_modelo_capa = p.id_modelocapa join tipo_laminacao as lampag on lampag.id_laminacao= p.id_laminacao join tamanho_de_album as tamanho on tamanho.id_tamanho_album = p.id_tamanhoalb join cantoneira as c on c.id_cantoneira= p.id_cantoneira join corte on corte.id_corte=p.id_corte  join laminacaocapa as lamcap on lamcap.id_laminacaocapa=p.id_laminacaocapa join modelo_estojo as modest on modest.id_modelo_estojo=p.id_estojo join modelo_maleta as modmal on modmal.id_modelo_maleta=p.id_maleta join status as s on s.id_status=p.id_status join status_pag as sp on sp.id_pagamento=p.status_pag where p.id_pedido='$id'";
+	$listar_pedidos="SELECT p.id_pedido, l.nome_loja,p.os_fotografia, p.os, p.cliente, p.email_cliente, p.vendedor, sp.statuspg, p.valor, s.status, p.telefone_cliente, p.data_loja, p.data_lab, p.data_encad, moda.nome_modelo, tamanho.nome_tamanho_album,p.paginas, modc.nome_modelo_capa, c.nome_cantoneira, corte.nome_corte, lampag.nome_laminacao, lamcap.nome_laminacaocapa, modest.nome_modelo_estojo, modmal.nome_modelo_maleta, sa.servico_nome  FROM pedido as p join lojas as l on p.id_loja=l.id_loja join modelo_de_album as   moda on moda.id_modelo= p.id_modelo join modelo_de_capa modc on modc.id_modelo_capa = p.id_modelocapa join tipo_laminacao as lampag on lampag.id_laminacao= p.id_laminacao join tamanho_de_album as tamanho on tamanho.id_tamanho_album = p.id_tamanhoalb join cantoneira as c on c.id_cantoneira= p.id_cantoneira join corte on corte.id_corte=p.id_corte  join laminacaocapa as lamcap on lamcap.id_laminacaocapa=p.id_laminacaocapa join modelo_estojo as modest on modest.id_modelo_estojo=p.id_estojo join modelo_maleta as modmal on modmal.id_modelo_maleta=p.id_maleta join status as s on s.id_status=p.id_status join status_pag as sp on sp.id_pagamento=p.status_pag join servico_adicional as sa on sa.id_servico=p.id_servico where p.id_pedido='$id'";
 	$query_listar=mysqli_query($conecta, $listar_pedidos);
 
 if($query_listar){
@@ -74,7 +74,7 @@ if($query_listar){
 		$osfotog=$mostra_pedido['os_fotografia'];
 		$data_lab=$mostra_pedido['data_lab'];
 		$data_encadd=isset($mostra_pedido['data_encad'])?$mostra_pedido['data_encad']:'';
-		
+		$servico_add=$mostra_pedido['servico_nome'];
 
 
 	if(strlen($preco)>=6){
@@ -116,7 +116,8 @@ echo "<b>Modelo de Capa:</b> <span class='red'>".$modelocapa."</span><br><br>";
 echo "<b>Cantoneira: </b><span class='red'>".$cantoneira."</span><br><br>";
 echo "<b>Corte: </b><span class='red'>".$corte."</span><br><br>";
 echo "<b>Laminação da  Capa (Personalizada): </b><span class='red'>".$laminacaocapa."</span><br><br>";
-echo "<b>Estojo: </b><span class='red'>".$estojo."</span><br></fieldset>";
+echo "<b>Estojo: </b><span class='red'>".$estojo."</span><br><br>";
+echo"<b>Serviço Adicional: </b> <span class='red'>".$servico_add."</span><br></fieldset>";
 
 
 
