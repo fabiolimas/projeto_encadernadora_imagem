@@ -54,6 +54,8 @@ $id=$_GET['id'];
 				 p.email_cliente,
 				 p.vendedor,
 				 sp.statuspg,
+				 sp.id_pagamento,
+				 p.status_pag,
 				 p.valor,
 				 s.status,
 				 p.telefone_cliente,
@@ -110,6 +112,7 @@ if($row == 1){
 		$data_lab=$mostra_pedido['data_lab'];
 		$data_encadd=isset($mostra_pedido['data_encad'])?$mostra_pedido['data_encad']:'';
 		$servico_add=$mostra_pedido['servico_nome'];
+		$id_status_pag=$mostra_pedido['status_pag'];
 
 
 	if(strlen($preco)>=6){
@@ -127,7 +130,10 @@ if($row == 1){
 }
 
 
-		
+	$pagamentos="SELECT * FROM status_pag";
+	$query_pagamento=mysqli_query($conecta, $pagamentos);
+
+
 echo"<b>Loja: </b><span class='red'>".$loja."</span><br><br>";
 echo "<b>OS Fotografia: </b> <span class='red'>".$osfotog."</span><br><br>";
 echo"<b>OS Encadernadora: </b><span class='red'>".$os."</span><br><br><br><hr><br>";
@@ -137,7 +143,20 @@ echo "<b>Telefone:</b> <span class='red'>".$telefone."</span><br><br></fieldset>
 
 echo "<fieldset><legend>Venda</legend><b> Vendedor:</b> <span class='red'>".$vendedor."</span><br><br>";
 echo"<b>Valor Total: </b> <span class='red'>R$ ".$new_valor."</span><br><br>";
-echo"<b>Status da OS: </b> <span class='red'>".$status_pag."</span><br><br>";
+echo"<form action='processa_edicao.php' method='post'>";
+echo"<input type='hidden' name='pedido' value='$id_pedido'>";
+echo"<b>Status da OS: <select name='new_stat' value=''><option value=''>Altera Status</option>";
+
+while ($muda_status=mysqli_fetch_array($query_pagamento)){
+
+
+	$id_status=$muda_status['id_pagamento'];
+	$status_nome=$muda_status['statuspg'];
+	echo"<option value='$id_status'>$status_nome</option>";
+}
+echo "</select> <input type='submit' value='OK' id='btn'></form><br><br>";
+
+
 echo" <b>Data de Envio Loja:</b> <span class='red'>".date('d-m-Y',strtotime($data_loja))."</span><br><br>";
 echo"<b>Data de Recebimento Minilab:</b> <span class='red' id='lab'>".date('d-m-Y', strtotime($data_lab))."</span><br><br>";
 echo"<b>Data de Recebimento Encadernadora:</b> <span class='red' id='encd' onload='dataEncad()'>".date('d-m-Y', strtotime($data_encadd))."</span><br><br>";

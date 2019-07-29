@@ -73,7 +73,9 @@ session_start();
 	if($query_listar){
 
 echo"<table border='1'>";
-	echo "<tr><td><b>Loja</b></td>";
+
+	echo "<tr>";
+	echo"<td><b>Loja</b></td>";
 	echo "<td><b>OS</b></td>";
 	echo"<td><b>Valor Total</b></td>";
 	echo"<td><b>Cliente</b></td>";
@@ -98,8 +100,8 @@ echo"<table border='1'>";
 		$valor=$lista_de_pedidos['valor'];
 
 
-
-		echo "<tr><td>$loja</td>";
+		
+		echo "<td>$loja</td>";
 		echo"<td>$os</td>";
 		echo"<td>R$ ".$valor."</td>";
 		echo"<td>".mb_strtoupper($cliente)."</td>";
@@ -107,7 +109,7 @@ echo"<table border='1'>";
 		echo"<td><span class='red'>$status</span></td>";
 		
 		
-		echo"<td><a href='os_visualizacao.php?id=$id_pedido'>Visualizar</a></td>";
+		echo"<td><a href='os_visualizacao.php?id=".$id_pedido."'>Visualizar</a></td>";
 		echo "<td><a href='minilab.php?os=$os'><img src='imagens/edit.png' width='25px'></a></td>";
 		echo"</tr>";
 

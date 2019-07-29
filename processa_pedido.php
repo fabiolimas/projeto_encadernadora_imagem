@@ -76,6 +76,8 @@ if(strlen($pagamento)>=6){
 
 	}else if(strlen($pagamento)==3){
 		$new_valor=substr_replace($pagamento, '.',4,1);
+	}else if(strlen($pagamento)==5){
+		$new_valor=substr_replace($pagamento, '.',2, 1);
 	}
 
 

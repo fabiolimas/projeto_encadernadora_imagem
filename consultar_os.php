@@ -67,7 +67,7 @@ echo"<table border='1'>";
 	echo "<td><b>Data Entrada/Lab</b></td>";
 	echo "<td><b>Data Entrada/Encadernadora</b></td>";
 	echo"<td><b>Status</b></td>";
-	echo "<td><b>Visualizar OS</b></td></tr>";
+	echo "<td><b>Alterar OS</b></td></tr>";
 
 	while($lista_de_pedidos=mysqli_fetch_array($query_listar)){
 
@@ -83,16 +83,23 @@ echo"<table border='1'>";
 
 
 		
+			#$new_cliente=strstr($cliente,' ',true);
+			$new_cliente=explode(' ', $cliente)[0];
+
+			
+
+		
+		
 
 		echo "<tr><td>$loja</td>";
 		echo"<td>$osfoto</td>";
 		echo"<td>$os</td>";
-		echo"<td>".mb_strtoupper($cliente)."</td>";
+		echo"<td>".mb_strtoupper($new_cliente)."</td>";
 		echo"<td>".date('d-m-Y', strtotime($data_loja))."</td>";
 		echo"<td><span class='lab'>".date('d-m-Y', strtotime($data_lab))."</span></td>";
 		echo"<td><span class='encd'>".date('d-m-Y', strtotime($data_encad))."</span></td>";
 		echo"<td><span class='red'>$status</span></td>";
-		echo"<td><a href='os_visualizacao.php?id=$id_pedido'>Visualizar</a></td>";
+		echo"<td><a href='edita_status.php?id=".$id_pedido."'><img src='imagens/edit.png' width='25px'></a></td>";
 		echo"</tr>";
 
 
