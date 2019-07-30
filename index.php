@@ -13,7 +13,7 @@
 </head>
 <body>
 	<img src="imagens/logo.png" id="logo">
-	<div id="interface">
+	<div id="interface1">
 
 		<ul id="main">
 			<a href="menu_loja.php"><li><img src="imagens/loja.png" id="h_loja2">Loja</li></a>

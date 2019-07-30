@@ -3,21 +3,24 @@
 	margin:0;
 	padding:0;
 }
-
+body{
+    width: 100%;
+}
 #interface{
 
-   width: 1080px;
+       width: max-content;
     background: white;
-    top: 31%;
+    margin-top: 7%;
     padding: 30px;
-    /* box-shadow: 2px 2px 5px #a09e9e; */
-    /* border: 1px solid #093c58; */
-    position: absolute;
-    left: 50%;
-    margin-left: -571px;
-    margin-top: -30px;
     border-radius: 7px;
+}
+#interface1{
 
+       width: auto;
+    background: white;
+    margin-top: 7%;
+    padding: 30px;
+    border-radius: 7px;
 }
 fieldset {
     padding: 12px;
@@ -61,10 +64,9 @@ legend{
 }
 div#imagem {
     width: 492px;
-    /* height: 300px; */
     display: block;
     position: absolute;
-    top: 49%;
+    top: 177%;
     left: 44%;
 }
 span.red {
@@ -77,18 +79,18 @@ img#image {
     margin: 0 auto;
 }
 .nova{
-    width: 358px;
+    width: 391px;
     background-color: #ffffff;
-    top: 50%;
     padding: 30px;
-    /* box-shadow: 2px 2px 1px #073954; */
-    /* border: 1px solid #093c58; */
-    height: 200px;
+     height: 200px;
     position: absolute;
     left: 50%;
     margin-left: -210px;
-    margin-top: -34px;
+    margin-top: 36px;
     border-radius: 7px;
+}
+#form_logins input[type="text"], input[type="password"] {
+    display: block;
 }
 
 body{
@@ -187,7 +189,8 @@ table[td]{
 	color:black;
 }*/
 ul{
-	margin-left: 27%;
+	margin: 0 auto;
+    display: table;
 }
 ul li{
 
@@ -255,12 +258,13 @@ margin-top: 35px;
 
 }
 img#logo {
-   position: absolute;
-    top: 31%;
-    left: 50%;
+       /* position: static; */
+    margin-top: 10px;
+    /* left: 104%; */
     width: 184px;
-    margin-left: -92px;
-    margin-top: -130px;
+    margin: 10px auto;
+    display: block;
+}
 
 }
 #form_logins {
@@ -280,10 +284,10 @@ img#logo {
 }
 
 #sair2 {
-    width: 50px;
-margin-left: 91%;
-position: absolute;
-cursor: pointer;
+  width: 50px;
+    right: 17px;
+    position: absolute;
+    cursor: pointer;
 }
 h3 {
     text-align: center;
@@ -292,10 +296,12 @@ h3 {
 }
 
 #btexport {
-      width: 52px;
+         width: 52px;
     margin-top: 76px;
-    position: absolute;
-    margin-left: 1042px;
+    float: right;
+    right: -59px;
+    position: relative;
+
 }
 #h_loja2{
     
@@ -386,4 +392,97 @@ a#btpagina:hover {
 }
 .stat4{
     color:#ffbf03;
+}
+@media only screen and (max-width: 424px){
+
+
+#interface1 {
+      width: max-content;
+    background: white;
+    top: 31%;
+    padding: 30px;
+    position: absolute;
+    border-radius: 7px;}
+
+ul li{
+
+    margin-top: 22px;
+    margin-left: 27px;
+}
+img#logo {
+    
+    margin-top: 10px;
+    width: 184px;
+    margin: 10px 212px;
+    display: block;}
+div#imagem {
+    
+    width: 283px;
+    display: block;
+    position: absolute;
+    top: 46%;
+    left: 49%;
+}
+
+
+select {
+    margin: 13px;
+}
+form {
+    margin-left: 39px;
+    width: 100%;
+    
+}
+fieldset {
+    padding: 12px;
+    color: #585656;
+    font-weight: bold;
+    background: #ffffff82;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+    width: 90%;
+    font-size: 13px;
+    
+}
+p {
+    margin-left: 97px;
+}
+body {
+    font-family: arial;
+    color: black;
+     background-image: url(http://www.fotoimagem.com.br/templates/imagem/imgs/bg_25.png); 
+
+}
+.nova{
+    width:100%;
+    border: 1px solid gray;
+    height: 249px;
+    box-shadow: 1px 1px 5px grey;
+    margin-bottom: 20px;
+}
+#imglogin {
+        display: none;
+}
+#btn{
+        margin-left: 33px;
+    margin-top: 10px;
+}
+table{
+    margin-left:40px;
+}
+#form_logins {
+    display: inline-grid;
+    margin-left: 7px;
+    width: 87%;
+}
+form#form_logins input[type=text], input[type=password] {
+    height: 26px;
+}
+h1{
+    font-size: 24px;
+    margin-left: 81px;
+}
+#sair2{
+    right: 0;
+}
 }

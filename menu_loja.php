@@ -13,7 +13,7 @@
 </head>
 <body>
 	<img src="imagens/logo.png" id="logo">
-	<div id="interface">
+	<div id="interface1">
 		<a href="index.php"><img src="imagens/sair.png" id="sair2" title="Sair"></a>
 
 		<ul id="main">

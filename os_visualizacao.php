@@ -31,7 +31,7 @@
 <body>
 		<meta charset="utf-8">
 	<img src="imagens/logo.png" id="logo">
-	<div id="interface">
+	<div id="interface1">
 
 
 <img src="imagens/sair.png" id="sair2" title="Sair" onclick="voltar()">
@@ -128,9 +128,9 @@ if($row == 1){
 
 
 		
-echo"<b>Loja: </b><span class='red'>".$loja."</span><br><br>";
-echo "<b>OS Fotografia: </b> <span class='red'>".$osfotog."</span><br><br>";
-echo"<b>OS Encadernadora: </b><span class='red'>".$os."</span><br><br><br><hr><br>";
+echo"<p><b>Loja: </b><span class='red'>".$loja."</span><br><br></p>";
+echo "<p><b>OS Fotografia: </b> <span class='red'>".$osfotog."</span><br><br></p>";
+echo"<p><b>OS Encadernadora: </b><span class='red'>".$os."</span><br><br><br><hr><br></p>";
 echo "<fieldset><legend>Dados do Cliente</legend><b>Nome do Cliente:</b><span class='red'> ".$cliente."</span><br><br>";
 echo "<b>Email:</b> <span class='red'>".$email."</span><br><br>";
 echo "<b>Telefone:</b> <span class='red'>".$telefone."</span><br><br></fieldset>";

@@ -59,7 +59,7 @@ session_start();
 
 		if ($row == 0){
 
-			echo "Nenhuma OS pendente para rebimento";
+			echo "<p>Nenhuma OS pendente para rebimento</p>";
 
 
 		}else{

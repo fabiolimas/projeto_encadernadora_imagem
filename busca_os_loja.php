@@ -14,7 +14,7 @@ include("conexao.php");
 </head>
 <body>
 	<img src="imagens/logo.png" id="logo">
-	<div id="interface">
+	<div id="interface1">
 
 <button id="btn" onclick="history.back()">Voltar</button></a>
 
@@ -65,7 +65,7 @@ include("conexao.php");
 	}else if(strlen($valor)==2){
 		$valor2=substr_replace($valor,',',2,1);
 
-	}else if(strlen($pagamento)==3){
+	}else if(strlen($valor)==3){
 		$valor2=substr_replace($valor, ',',4,1);
 	}
 
