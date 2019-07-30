@@ -393,6 +393,31 @@ a#btpagina:hover {
 .stat4{
     color:#ffbf03;
 }
+ul#conts li {
+    width: 147px;
+    height: 147px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: black;
+    font-family: arial;
+    background: cadetblue;
+    border: none;
+
+}
+li.total {
+    background: #c8e698 !important;
+    }
+  /*  li.petrolina {
+    background: #F44336;
+}
+li.river {
+    background: cadetblue;
+}
+li.juaziero {
+    background: yellowgreen;
+}*/
+
+
 @media only screen and (max-width: 424px){
 
 

@@ -29,7 +29,7 @@ session_start();
 			setTimeout("window.location='receber_lab.php'" ,2000);
 		}
 		function logingeral(){
-			setTimeout("window.location='rel_geral.php'",2000);
+			setTimeout("window.location='oss_encadernadora.php'",2000);
 		}
 	</script>
 </head>
@@ -86,6 +86,16 @@ session_start();
 				break;
 
 				case 3:
+
+				$_SESSION['usuario']=$usuario;
+				$_SESSION['senha']=$senha;
+
+				echo "Autenticado com sucesso!...";
+				echo "<script>logingeral()</script>";
+
+				break;
+
+				case 4:
 
 				$_SESSION['usuario']=$usuario;
 				$_SESSION['senha']=$senha;
