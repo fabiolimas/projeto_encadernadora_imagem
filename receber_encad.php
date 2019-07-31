@@ -28,8 +28,9 @@ session_start();
 	<title>Entrada de Albuns</title>
 </head>
 <body>
-	<img src="imagens/logo.png" id="logo">
+	
 	<div id="interface">
+		<a href="index.php"><img src="imagens/logo.png" id="logo"></a>
 
 		<a href='logout.php'><img src="imagens/sair.png" id="sair" title="Sair"></a>
 <a href="relatorio.php"><img src="imagens/exportar.png" id="btexport" title="Exportar"></a>
@@ -108,24 +109,14 @@ session_start();
 			echo"<td ><a href='encadernadora.php?os=$osfoto'><img src='imagens/edit.png' width=10px id='bt' ></a></td>";
 			echo"</tr>";
 			
-
-			
-					
+		
 
 					}
 
 
 		}
 
-			
-
-		
-
-		
-
-			
-
-
+	
 ?>
 
 

@@ -28,11 +28,12 @@ session_start();
 	<title>Entrada de Albuns</title>
 </head>
 <body>
-	<img src="imagens/logo.png" id="logo">
+	
 	<div id="interface1">
+		<img src="imagens/logo.png" id="logo">
 
 		<a href='logout.php'><img src="imagens/sair.png" id="sair" title="Sair"></a>
-<a href="relatorio.php"><img src="imagens/exportar.png" id="btexport" title="Exportar"></a>
+
 
 	<?php
 
@@ -56,7 +57,7 @@ session_start();
 
 	<div id="contadores">
 		<ul id="conts">
-			<center><li class='total'>Albuns Feitos<br>
+			<center><li class='total'>Albuns<br>
 				<?php echo "<br><center><h1>$rows</h1></center>";?>
 
 			</li><br></center>
@@ -83,7 +84,7 @@ session_start();
 
 		</ul>
 	</div>
-
+<a href="relatorio.php"><img src="imagens/exportar.png" id="btexport" title="Exportar"></a>
 <form name="form_busca" action="busca_encad.php" method="post" style="padding:10px;">
 <fieldset style="padding: 10px;"><legend>Filtrar</legend>
 	
@@ -99,7 +100,7 @@ session_start();
 <?php
 	
 
-	$listar_envios="SELECT p.id_pedido, p.id_loja, l.nome_loja, p.cliente,p.os_fotografia,p.valor, stp.statuspg, p.os, p.data_loja, s.status, p.data_lab FROM pedido as p join lojas as l on l.id_loja=p.id_loja join status as s on s.id_status=p.id_status join status_pag as stp on stp.id_pagamento=p.status_pag";
+	$listar_envios="SELECT p.id_pedido, p.id_loja, l.nome_loja, p.cliente,p.os_fotografia,p.valor, stp.statuspg, p.os, p.data_loja, s.status, p.data_lab FROM pedido as p join lojas as l on l.id_loja=p.id_loja join status as s on s.id_status=p.id_status join status_pag as stp on stp.id_pagamento=p.status_pag order by p.id_pedido desc LIMIT 50 ";
 		$query_envios=mysqli_query($conecta, $listar_envios);
 		$row=mysqli_num_rows($query_envios);
 
@@ -149,6 +150,7 @@ session_start();
 	}
 
 
+	$new_cliente=explode(' ', $cliente)[0];
 			
 					
 
@@ -158,7 +160,7 @@ session_start();
 			echo"<td>$os</td>";
 			echo"<td>R$ $valor2</td>";
 			echo"<td>$statuspg</td>";
-			echo"<td>".mb_strtoupper($cliente)."</td>";
+			echo"<td>".mb_strtoupper($new_cliente)."</td>";
 			echo"<td>".date('d-m-Y', strtotime($data_envs))."</td>";			
 			echo"<td><span class='red'>".$status_env."</span></td>";
 			echo"<td><a href='os_visualizacao.php?id=$id'>Visualizar</a></td>";			

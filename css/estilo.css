@@ -259,10 +259,11 @@ margin-top: 35px;
 }
 img#logo {
        /* position: static; */
-    margin-top: 10px;
+        /* position: static; */
+    /* margin-top: 10px; */
     /* left: 104%; */
-    width: 184px;
-    margin: 10px auto;
+    width: 141px;
+    /* margin: 10px auto; */
     display: block;
 }
 
@@ -299,8 +300,7 @@ h3 {
          width: 52px;
     margin-top: 76px;
     float: right;
-    right: -59px;
-    position: relative;
+     position: relative;
 
 }
 #h_loja2{
@@ -436,10 +436,12 @@ ul li{
 }
 img#logo {
     
-    margin-top: 10px;
-    width: 184px;
-    margin: 10px 212px;
-    display: block;}
+  
+
+margin-bottom: 21px;
+display: block;
+    
+}
 div#imagem {
     
     width: 283px;
@@ -447,6 +449,9 @@ div#imagem {
     position: absolute;
     top: 46%;
     left: 49%;
+}
+ul#conts li {
+    margin-right: -13px;
 }
 
 
@@ -489,8 +494,8 @@ body {
         display: none;
 }
 #btn{
-        margin-left: 33px;
-    margin-top: 10px;
+       margin-left: 1px;
+    margin-top: -15px;
 }
 table{
     margin-left:40px;
@@ -501,11 +506,16 @@ table{
     width: 87%;
 }
 form#form_logins input[type=text], input[type=password] {
-    height: 26px;
+        height: 26px;
+    border-radius: 7px;
+    padding: 5px;
+    border: 1px solid gray;
+    margin: 0 auto;
+    width: 100%;
 }
 h1{
     font-size: 24px;
-    margin-left: 81px;
+    
 }
 #sair2{
     right: 0;

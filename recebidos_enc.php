@@ -34,8 +34,9 @@ session_start();
 	</script>
 </head>
 <body>
-	<img src="imagens/logo.png" id="logo">
+	
 	<div id="interface1">
+		<a href="index.php"><img src="imagens/logo.png" id="logo"></a>
 		<img src="imagens/sair.png" id="sair" title="Sair" onclick="voltar()">
 		<a href="relatorio.php"><img src="imagens/exportar.png" id="btexport" title="Exportar"></a>
 		<h1>Entrada de Albuns - (recebidos)</h1>

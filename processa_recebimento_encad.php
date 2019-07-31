@@ -25,7 +25,7 @@ session_start();
 		
 		function voltar(){
 
-			setTimeout("window.location='receber_encad.php'", 2000);
+			setTimeout("window.location='receber_encad.php'", 4000);
 
 		}
 	
@@ -34,7 +34,7 @@ session_start();
 </head>
 <body>
 	<img src="imagens/logo.png" id="logo">
-	<div id="interface">
+	<div id="interface1">
 		<a href="receber_encad.php"><img src="imagens/sair.png" id="sair" title="Sair" onclick="voltar()"></a>
 		<a href="relatorio.php"><img src="imagens/exportar.png" id="btexport" title="Exportar"></a>
 		<h1>Entrada de Albuns - (recebidos)</h1>
@@ -46,7 +46,7 @@ session_start();
 	$data=$_POST['data_encad'];
 	$datalab=isset($_POST['datalab'])?$_POST['datalab']:"";
 
-	if ($datalab == null | $datalab==0){
+	if ($datalab == null || $datalab==0 || $datalab =='31-12-1969'){
 
 		echo "<center><img src='imagens/alert.png' width='50px'><p> A OS $os, ainda não foi recebida no laboratório!!</center>";
 		echo"<script>voltar()</script>";

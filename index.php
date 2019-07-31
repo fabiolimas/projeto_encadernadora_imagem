@@ -12,8 +12,9 @@
 	<title>Encadernadora</title>
 </head>
 <body>
-	<img src="imagens/logo.png" id="logo">
+	<a href="index.php"><img src="imagens/logo.png" id="logo"></a>
 	<div id="interface1">
+
 
 		<ul id="main">
 			<a href="menu_loja.php"><li><img src="imagens/loja.png" id="h_loja2">Loja</li></a>

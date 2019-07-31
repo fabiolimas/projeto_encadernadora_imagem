@@ -13,8 +13,9 @@ include("conexao.php");
 	<title>Saida Albuns</title>
 </head>
 <body>
-	<img src="imagens/logo.png" id="logo">
+	
 	<div id="interface1">
+		<a href="index.php"><img src="imagens/logo.png" id="logo"></a>
 
 <button id="btn" onclick="history.back()">Voltar</button></a>
 

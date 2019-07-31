@@ -98,7 +98,7 @@
 		</fieldset>
 		
 		<fieldset><legend>Venda</legend>
-		Vendedor: <input type='text' name='vendedor' required><br>
+		Vendedor: <input type='text' name='vendedor' placeholder='Nome do Vendedor' required><br>
 		Valor Total: <input type='text' name='valor' required><br>
 		Status da OS:<select name='status_os' required><option value=''>Status OS</option>";
 		if($query_status){

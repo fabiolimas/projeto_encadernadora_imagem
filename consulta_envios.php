@@ -14,8 +14,9 @@
 <body>
 	
 	
-	<img src="imagens/logo.png" id="logo">
+	
 	<div id="interface1">
+		<a href="index.php"><img src="imagens/logo.png" id="logo"></a>
 <a href="menu_loja.php"><img src="imagens/sair.png" id="sair2" title="Sair"></a>
 	<h1>Consulta de Os's</h1>
 	
